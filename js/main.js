@@ -51,20 +51,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to update active section
     function updateActiveSection() {
-        const scrollPosition = window.scrollY + (window.innerHeight/2);
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const isAtBottom = (windowHeight + scrollPosition) >= documentHeight - 50;
 
+        // First, remove active class from all links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+            link.removeAttribute('data-active');
+        });
+
+        // If we're at the bottom, only highlight the last section
+        if (isAtBottom) {
+            const lastSection = sections[sections.length - 1];
+            const lastSectionLink = document.querySelector(`a[href="#${lastSection.getAttribute('id')}"]`);
+            if (lastSectionLink) {
+                lastSectionLink.classList.add('active');
+                lastSectionLink.setAttribute('data-active', 'true');
+            }
+            return;
+        }
+
+        // Otherwise, check each section normally
         sections.forEach(section => {
             const sectionTop = section.offsetTop - navbarHeight;
             const sectionBottom = sectionTop + section.offsetHeight;
             const sectionId = section.getAttribute('id');
             const correspondingLink = document.querySelector(`a[href="#${sectionId}"]`);
 
-            if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 correspondingLink?.classList.add('active');
                 correspondingLink?.setAttribute('data-active', 'true');
-            } else {
-                correspondingLink?.classList.remove('active');
-                correspondingLink?.removeAttribute('data-active');
             }
         });
     }
@@ -97,4 +115,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial call to set active section on page load
     updateActiveSection();
+
+    // Handle mobile menu
+    const menuButton = document.querySelector('.navbar-toggler');
+    const body = document.body;
+
+    menuButton.addEventListener('click', function() {
+        body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarCollapse.classList.contains('show')) {
+                menuButton.click();  // Close the menu
+            }
+        });
+    });
+
+    // Handle navbar background on mobile
+    function updateNavbarBackground() {
+        if (window.innerWidth <= 768) {  // Only on mobile
+            if (window.scrollY > 50) {  // When scrolled
+                navbar.style.backgroundColor = 'var(--bg-dark)';
+                navbar.style.transition = 'background-color 0.3s ease';
+            } else {  // At top
+                navbar.style.backgroundColor = 'transparent';
+                navbar.style.transition = 'background-color 0.3s ease';
+            }
+        }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', updateNavbarBackground);
+    window.addEventListener('resize', updateNavbarBackground);
+
+    // Initial call
+    updateNavbarBackground();
 });

@@ -6,6 +6,7 @@
     --accent-color: #4a90e2;
     --gradient-start: #242424;
     --gradient-end: #2d2d2d;
+    --border-radius: 8px;
 }
 
 body {
@@ -178,4 +179,291 @@ section {
     border-radius: 8px;
     padding: 2rem;
     margin-top: 1rem;  /* Space after section title */
+}
+
+/* Vertical Navbar Styles */
+@media (min-width: 769px) {
+    #mainNav {
+        width: 20vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column !important;
+        padding: 2rem 0;
+        background-color: var(--bg-dark);
+        align-items: center;
+        overflow-y: hidden;
+        box-shadow: none;  /* Remove any box shadow */
+        -webkit-box-shadow: none;  /* For Safari */
+        border: none;  /* Remove any borders */
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+        overflow: hidden;  /* Hide any potential overflow */
+    }
+
+    /* Adjust spacing to ensure content fits without scrolling */
+    .nav-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        text-align: center;
+        width: 90%;
+        padding: 0 0.5rem;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        flex-direction: column !important;
+        gap: 0.5rem;  /* Reduced from 0.75rem */
+        margin: 1rem 0 0 0;  /* Reduced top margin */
+        align-items: center;
+        padding: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        margin: 0.5rem 0;  /* Reduced from 0.75rem */
+        text-align: center;
+    }
+
+    .profile-container {
+        width: calc(min(180px, 90%));
+        height: auto;
+        aspect-ratio: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    .profile-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .navbar-brand {
+        margin: 1rem 0 0.5rem 0;
+        font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+        font-weight: 600;
+        line-height: 1.2;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        white-space: pre-wrap;  /* Allow wrapping at spaces */
+        display: flex;
+        flex-direction: column;  /* Stack first and last name */
+        align-items: center;
+    }
+
+    /* Add space between first and last name */
+    .navbar-brand span {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-title {
+        color: var(--text-secondary);
+        margin: 0.75rem 0 1rem 0;  /* Added bottom margin */
+        font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        word-wrap: break-word;
+        hyphens: auto;
+        overflow-wrap: break-word;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;  /* Increased gap between icons */
+        margin-top: 0.5rem;
+    }
+
+    .social-icon {
+        color: var(--text-secondary);
+        font-size: 1.8rem;  /* Increased from 1.3rem */
+        transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        color: var(--text-primary);
+    }
+
+    /* Adjust main content */
+    main.container {
+        margin-left: calc(20vw + 1.5rem);
+        margin-right: 2.75rem;  /* Increased from 2.5rem */
+        margin-top: 2rem !important;
+        width: calc(80vw - 4.25rem);  /* Adjusted to account for new margin */
+        max-width: none;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    /* Remove all top spacing from first section */
+    section:first-of-type {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* Remove spacing from section title */
+    section:first-of-type .section-title {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* Ensure body doesn't have top padding */
+    body {
+        padding-top: 0 !important;
+        margin-top: 0;
+    }
+
+    /* Remove any container margins */
+    .container {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    /* Keep margin for other sections */
+    section + section {
+        margin-top: 2rem;
+    }
+
+    /* Adjust hero section */
+    .hero-section {
+        margin-left: 20vw;
+        width: 80vw;
+    }
+
+    /* Hide mobile toggle */
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* Ensure sections don't overflow */
+    section {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);  /* Remove top-left radius */
+    }
+
+    /* In case there are any specific section styles */
+    .about-section,
+    .experience-section,
+    .publications-section,
+    .projects-section {
+        border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);  /* Remove top-left radius */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 76px;
+    }
+
+    #mainNav {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: transparent;
+        z-index: 1030;
+        height: 76px;
+    }
+
+    .navbar-collapse {
+        background-color: var(--bg-dark);
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        z-index: 1020;
+        padding: 1rem 0;
+    }
+
+    .hero-section {
+        padding: 0.5rem;
+        position: relative;
+        z-index: 1;
+        margin-top: -76px;
+        padding-top: calc(76px + 0.5rem);
+        background: var(--bg-dark);
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding-top: 0;
+    }
+
+    body.menu-open {
+        padding-top: 76px;
+    }
+
+    body.menu-open .hero-section {
+        margin-top: -76px;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: column !important;  /* Force vertical stacking */
+        width: 100%;
+        align-items: center;
+        gap: 1rem;  /* Space between items */
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.75rem 0;
+        width: 100%;
+        display: block;
+    }
+
+    .profile-container {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .social-icon {
+        color: var(--text-secondary);
+        font-size: 1.8rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-icon:hover {
+        color: var(--text-primary);
+    }
+
+    .nav-header .social-links {
+        display: none;
+    }
+
+    .hero-section .social-links {
+        display: flex;
+    }
 }

@@ -12,21 +12,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Scroll to top when clicking navbar name
     navbarBrand.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault();http://127.0.0.1:3000/index.html#page-top
         window.scrollTo({ top: 0, behavior: 'smooth' });
         navbarCollapse.classList.remove('show');
-    });
-
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > heroSection.offsetHeight) {
-            navbar.classList.add('fixed');
-        } else {
-            navbar.classList.remove('fixed');
-        }
-    });
-
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
 
     // Update navbar background on scroll and resize (for mobile)

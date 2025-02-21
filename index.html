@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Federico Milana</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -12,243 +12,261 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="res/pfp.png">
 </head>
 <body>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="nav-header">
-            <div class="profile-container">
-                <img src="res/pfp.png" class="profile-image rounded-circle" alt="Profile Picture">
-            </div>
-            <a class="navbar-brand" href="#page-top">
-                <span>Federico</span>
-                <span>Milana</span>
-            </a>
-            <p class="nav-title">Human-AI Interaction Researcher</p>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/fmilana" target="_blank" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://scholar.google.com/citations?user=TGznKNEAAAAJ&hl=en&oi=ao" target="_blank" class="social-icon">
-                    <i class="fas fa-graduation-cap"></i>
-                </a>
-                <a href="https://github.com/fmilana" target="_blank" class="social-icon">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </div>
-        <!-- Mobile toggle button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav flex-column w-100">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publications">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Main Content -->
+    <main class="container">
 
-    <!-- Update hero section to only show on mobile -->
-    <header class="hero-section text-white d-md-none">
-        <div class="hero-content">
-            <div class="profile-container">
-                <img src="res/pfp.png" class="profile-image rounded-circle" alt="Profile Picture">
+        <!-- Hero section for mobile -->
+        <header class="hero-section text-white d-md-none">
+            <div class="hero-content">
+                <div class="profile-container">
+                    <img src="res/pfp.png" class="profile-image rounded-circle" alt="Profile Picture">
+                </div>
+                <div>
+                    <h1 class="display-4 fw-bold mb-3">Federico Milana</h1>
+                    <p class="lead fs-3 text-light">Human-AI Interaction Researcher</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/fmilana" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=TGznKNEAAAAJ&hl=en&oi=ao" target="_blank" class="social-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://github.com/fmilana" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h1 class="display-4 fw-bold mb-3">Federico Milana</h1>
-                <p class="lead fs-3 text-light">Human-AI Interaction Researcher</p>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="nav-header">
+                <div class="profile-container">
+                    <img src="res/pfp.png" class="profile-image rounded-circle" alt="Profile Picture">
+                </div>
+                <a class="navbar-brand" href="#page-top">
+                    <span>Federico</span>
+                    <span>Milana</span>
+                </a>
+                <p class="nav-title">Human-AI Interaction<br>Researcher</p>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/fmilana" target="_blank" class="social-icon">
+                    <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" class="social-icon">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://scholar.google.com/citations?user=TGznKNEAAAAJ&hl=en&oi=ao" target="_blank" class="social-icon">
+                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="social-icon">
                         <i class="fas fa-graduation-cap"></i>
                     </a>
-                    <a href="https://github.com/fmilana" target="_blank" class="social-icon">
+                    <a href="https://github.com/YOUR_USERNAME" target="_blank" class="social-icon">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
             </div>
-        </div>
-    </header>
+            <div class="navbar-collapse collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#bio" data-page="bio" data-active="true">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-page="projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-page="contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <!-- Main Content -->
-    <main class="container my-5">
-        <!-- About Section -->
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="section-content">
-                <div class="row">
-                    <div class="col-md-8">
-                        <p class="lead text-secondary">
-                            PhD in Human-AI Interaction with experience in designing and evaluating user interaction with machine learning classifiers, large language models and conversational agents.
-                        </p>
+        <!-- Bio tab content -->
+        <div id="bio-content" class="page-content active">
+
+            <!-- All your current sections -->
+            <section id="about">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-content">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="lead text-secondary">
+                                PhD in Human-AI Interaction with experience in designing and evaluating user interaction with machine learning classifiers, large language models and conversational agents.
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section id="experience">
+                <h2 class="section-title">Experience</h2>
+                <div class="section-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">PhD Student</h3>
+                                <p class="timeline-period">September 2020 - November 2024</p>
+                                <p class="timeline-location">University College London</p>
+                                <ul class="timeline-details">
+                                    <li>Research focus on Human-AI Interaction and Explainable AI</li>
+                                    <li>Published papers in top HCI conferences</li>
+                                    <li>Thesis title: "Evaluating Interaction with Machine Learning Classifiers and Interpretability"</li>
+                                </ul>
+                            </div>
+                        </div>
 
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2 class="section-title">Experience</h2>
-            <div class="section-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">PhD Student</h3>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Postgraduate Teaching Assistant</h3>
+                                <p class="timeline-period">January 2021 - May 2024</p>
+                                <p class="timeline-location">University College London</p>
+                                <ul class="timeline-details">
+                                    <li>For the modules "Data Visualization" and "Affective Interaction" modules of the MSc in HCI</li>
+                                    <li>Assisted students with understanding the course content and providing feedback on their assignments</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Research Assistant</h3>
+                                <p class="timeline-period">August 2019 - October 2019</p>
+                                <p class="timeline-location">University College London</p>
+                                <ul class="timeline-details">
+                                    <li>Research on the effects of reply suggestion buttons and response variability in chatbots on autonomy delegation and trust</li>
+                                    <li>Personally developed a web application using RASA to build a chatbot assistant for simulated social trading</li>
+                                    <li>Results of a user study published at CUI 2023</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="education">
+                <h2 class="section-title">Education</h2>
+                <div class="section-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                            <h3 class="timeline-title">PhD in Human-AI Interaction</h3>
                             <p class="timeline-period">September 2020 - November 2024</p>
                             <p class="timeline-location">University College London</p>
-                            <ul class="timeline-details">
-                                <li>Research focus on Human-AI Interaction and Explainable AI</li>
-                                <li>Published papers in top HCI conferences</li>
-                                <li>Thesis title: "Evaluating Interaction with Machine Learning Classifiers and Interpretability"</li>
-                            </ul>
                         </div>
                     </div>
-
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 class="timeline-title">Research Assistant</h3>
-                            <p class="timeline-period">August 2019 - October 2019</p>
+                            <h3 class="timeline-title">MSc in Human-Computer Interaction</h3>
+                            <p class="timeline-period">September 2018 - August 2019</p>
                             <p class="timeline-location">University College London</p>
-                            <ul class="timeline-details">
-                                <li>Research on the effects of reply suggestion buttons and response variability in chatbots on autonomy delegation and trust</li>
-                                <li>Personally developed a web application using RASA to build a chatbot assistant for simulated social trading</li>
-                                <li>Results of a user study published at CUI 2023</li>
-                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">BSc in Computer Science</h3>
+                            <p class="timeline-period">September 2015 - July 2018</p>
+                            <p class="timeline-location">King's College London</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            <section id="publications">
+                <h2 class="section-title">Publications</h2>
+                <div class="section-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Understanding Interaction with Machine Learning through a Thematic Analysis Coding Assistant: A User Study</h3>
+                                <p class="timeline-period">Forthcoming, April 2025</p>
+                                <p class="timeline-location">CSCW</p>
+                                <ul class="timeline-details">
+                                    <li>Conducted a user study with 20 participants exploring how non-experts interact with Interactive Machine Learning (IML) systems</li>
+                                    <li>Developed TACA, an IML tool for thematic analysis, enabling iterative model training and customization</li>
+                                    <li>Found that users gained new analytical insights and adapted their interpretative approaches through IML interaction</li>
+                                    <li>Identified key challenges in user understanding of ML concepts and proposed design recommendations for IML systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Chatbots as Advisers: the Effects of Response Variability and Reply Suggestion Buttons</h3>
+                                <p class="timeline-period">July 2023</p>
+                                <p class="timeline-location">CUI</p>
+                                <ul class="timeline-details">
+                                    <li>Investigated how chatbot design features influence users' likelihood to follow AI advice in decision-making contexts</li>
+                                    <li>Designed and conducted an incentivized study examining effects of response variability and reply suggestion buttons</li>
+                                    <li>Built a simulated social trading platform where participants made investment decisions with chatbot guidance</li>
+                                    <li>Found that both response variability and reply suggestions significantly increased users' trust and adherence to chatbot advice</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-        <!-- Education Section -->
-        <section id="education" class="mb-5">
-            <h2 class="section-title">Education</h2>
-            <div class="section-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                        <h3 class="timeline-title">PhD in Human-AI Interaction</h3>
-                        <p class="timeline-period">September 2020 - November 2024</p>
-                        <p class="timeline-location">University College London</p>
+        <!-- Projects tab content -->
+        <div id="projects-content" class="page-content">
+            <section>
+                <h2 class="section-title">Projects</h2>
+                <div class="section-content">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">TACA: Thematic Analysis Coding Assistant</h3>
+                                <p class="timeline-period">2020-2024</p>
+                                <ul class="timeline-details">
+                                    <li>A tool for thematic analysis of text data, enabling iterative XGBoost model training and customization</li>
+                                    <li>Conducted a user study with 20 participants to evaluate user experience</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Interpretable Text Classification</h3>
+                                <p class="timeline-period">2024</p>
+                                <ul class="timeline-details">
+                                    <li>Developed an XGboost and BERT interpretable text classification model using LIME and SHAP values</li>
+                                    <li>Conducted a user study with 128 participants to evaluate model interpretability</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Chatbot Social Trading Assistant</h3>
+                                <p class="timeline-period">2019</p>
+                                <ul class="timeline-details">
+                                    <li>Built a simulated social trading platform where participants made investment decisions with chatbot guidance</li>
+                                    <li>Conducted a user study with 64 participants to evaluate effects of UI and response variations on user trust</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Literary Corpus Processor</h3>
+                                <p class="timeline-period">2018</p>
+                                <ul class="timeline-details">
+                                    <li>Developed a tool to enable corpus-based analysis and comparisons of translated literary texts</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">MSc in Human-Computer Interaction</h3>
-                        <p class="timeline-period">September 2018 - August 2019</p>
-                        <p class="timeline-location">University College London</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">BSc in Computer Science</h3>
-                        <p class="timeline-period">September 2015 - July 2018</p>
-                        <p class="timeline-location">King's College London</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <!-- Publications Section -->
-        <section id="publications" class="mb-5">
-            <h2 class="section-title">Publications</h2>
-            <div class="section-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Understanding Interaction with Machine Learning through a Thematic Analysis Coding Assistant: A User Study</h3>
-                            <p class="timeline-period">Forthcoming, April 2025</p>
-                            <p class="timeline-location">CSCW</p>
-                            <ul class="timeline-details">
-                                <li>Conducted a user study with 20 participants exploring how non-experts interact with Interactive Machine Learning (IML) systems</li>
-                                <li>Developed TACA, an IML tool for thematic analysis, enabling iterative model training and customization</li>
-                                <li>Found that users gained new analytical insights and adapted their interpretative approaches through IML interaction</li>
-                                <li>Identified key challenges in user understanding of ML concepts and proposed design recommendations for IML systems</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Chatbots as Advisers: the Effects of Response Variability and Reply Suggestion Buttons</h3>
-                            <p class="timeline-period">July 2023</p>
-                            <p class="timeline-location">CUI</p>
-                            <ul class="timeline-details">
-                                <li>Investigated how chatbot design features influence users' likelihood to follow AI advice in decision-making contexts</li>
-                                <li>Designed and conducted an incentivized study examining effects of response variability and reply suggestion buttons</li>
-                                <li>Built a simulated social trading platform where participants made investment decisions with chatbot guidance</li>
-                                <li>Found that both response variability and reply suggestions significantly increased users' trust and adherence to chatbot advice</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- Contact tab content -->
+        <div id="contact-content" class="page-content">
+            <section>
+                <h2 class="section-title">Contact</h2>
+                <div class="section-content">
+                    <p>Feel free to reach out to me at:</p>
+                    <p>Email: federicomilana@outlook.com</p>
+                    <!-- Add more contact info -->
                 </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="mb-5">
-            <h2 class="section-title">Projects</h2>
-            <div class="section-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">TACA: Thematic Analysis Coding Assistant</h3>
-                            <p class="timeline-period">2020-2024</p>
-                            <ul class="timeline-details">
-                                <li>Developed a tool for thematic analysis of text data, enabling iterative XGBoost model training and customization</li>
-                                <li>Implemented a user-friendly interface for non-experts to interact with the model</li>
-                                <li>Conducted a user study with 20 participants to evaluate user experience</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Interpretable Text Classification</h3>
-                            <p class="timeline-period">2024</p>
-                            <ul class="timeline-details">
-                                <li>Developed an XGboost and BERT interpretable text classification model using LIME and SHAP values</li>
-                                <li>Conducted a user study with 128 participants to evaluate model interpretability</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Chatbot Social Trading Assistant</h3>
-                            <p class="timeline-period">2019</p>
-                            <ul class="timeline-details">
-                                <li>Built a simulated social trading platform where participants made investment decisions with chatbot guidance</li>
-                                <li>Conducted a user study with 64 participants to evaluate effects of UI and response variations on user trust</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3 class="timeline-title">Literary Corpus Processor</h3>
-                            <p class="timeline-period">2018</p>
-                            <ul class="timeline-details">
-                                <li>Developed a tool to enable corpus-based analysis and comparisons of translated literary texts</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 </body>
 </html>

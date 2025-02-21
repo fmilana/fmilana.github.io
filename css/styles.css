@@ -9,6 +9,17 @@
     --border-radius: 8px;
 }
 
+a {
+    color: var(--text-primary);
+}
+
+.project-image {
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    object-fit: cover;
+}
+
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
@@ -309,7 +320,7 @@ section + section {
         flex-direction: row !important;
         justify-content: center;
         width: 100%;
-        padding: 0.5rem;
+        /* padding: 0.5rem; */
         display: flex !important; /* Force display */
     }
 

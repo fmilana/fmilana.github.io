@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.appendChild(script);
 
     const navbar = document.getElementById('mainNav');
-    const heroSection = document.querySelector('.hero-section');
     const navLinks = document.querySelectorAll('.nav-link');
     const navbarCollapse = document.querySelector('.navbar-collapse');
     const navbarBrand = document.querySelector('.navbar-brand');
@@ -44,9 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Show selected content
             const targetId = this.getAttribute('href').substring(1);
             const targetContent = document.getElementById(targetId + '-content');
-            if (targetContent) {
-                targetContent.classList.add('active'); // Add active class to the target content
-            }
+            targetContent.classList.add('active'); // Add active class to the target content
+
+            // Scroll to top of the target content
+            const navabarHeight = navbar.offsetHeight;
+            const targetPosition = targetContent.offsetTop - navabarHeight;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
         });
     });
 });

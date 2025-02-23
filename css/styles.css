@@ -13,6 +13,11 @@ a {
     color: var(--text-primary);
 }
 
+a.paper-title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .project-image {
     width: 100%;
     max-width: 1000px;
@@ -23,6 +28,7 @@ a {
 body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
+    font-weight: 300;
 }
 
 /* Keep margin for other sections */
@@ -64,6 +70,24 @@ section + section {
     width: 50px;
     height: 3px;
     background: var(--accent-color);
+}
+
+.timeline-period {
+    /* font-size: 1.2rem; */
+    font-weight: 200;
+    color: var(--text-secondary);
+}
+
+.timeline-authors {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--text-secondary);
+}
+
+.timeline-conference {
+    font-size: 1.2rem;
+    font-weight: 200;
+    /* color: var(--text-secondary); */
 }
 
 .text-secondary {
@@ -176,7 +200,7 @@ section + section {
         padding: 1.2rem 0.5rem;  /* Added horizontal padding */
         width: 90%;  /* Reduced from 100% to give some side margin */
         font-size: clamp(1.2rem, 3vw, 1.7rem);  /* Responsive font size with minimum and maximum */
-        font-weight: 500;
+        font-weight: 300;
         transition: color 0.3s ease;
         text-align: center;
         white-space: nowrap;
@@ -322,23 +346,22 @@ section + section {
     }
 
     .nav-item {
-        width: 100%;
+        flex: 0 1 auto;
         text-align: center;
     }
 
     .nav-link {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding: 0.75rem 0;
         width: 100%;
         display: block;
     }
 
     .navbar-nav {
+        display: flex !important;
         flex-direction: row !important;
-        justify-content: center;
         width: 100%;
-        /* padding: 0.5rem; */
-        display: flex !important; /* Force display */
+        justify-content: space-evenly;
     }
 
     .nav-item {
@@ -348,7 +371,7 @@ section + section {
 
     .nav-link.active {
         color: var(--text-primary) !important;
-        font-weight: 600;
+        /* font-weight: 600; */
         display: block !important;
     }
 

@@ -18,10 +18,94 @@ a.paper-title-link {
     color: inherit;
 }
 
+
+
+
+.carousel {
+    position: relative;
+    margin: 0;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.carousel-content {
+    display: relative;
+    width: 100%;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+.carousel-image {
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--text-primary);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s; 
+    z-index: 2;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--text-primary);
+}
+
+
+
+
+
 .project-image {
     width: 100%;
     max-width: 1000px;
     height: 100%;
+    padding-bottom: 1rem;
     object-fit: cover;
 }
 
@@ -271,7 +355,7 @@ section + section {
     }
 
     .timeline-content {
-        padding: 1.5rem;
+        /* padding: 1.5rem; */
         border-radius: 8px;
         transition: transform 0.3s ease;
     }

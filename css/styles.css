@@ -9,6 +9,7 @@
     --border-radius: 8px;
 }
 
+
 a {
     color: var(--text-primary);
 }
@@ -18,8 +19,55 @@ a.paper-title-link {
     color: inherit;
 }
 
+.lead-col {
+    max-width: 1000px;
+    width: 100%;
+}
 
+p.lead {
+    margin-bottom: 0;
+}
 
+.timeline-title {
+    margin-bottom: 0;
+}
+
+.timeline-location {
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+.timeline-period {
+    /* font-size: 1.2rem; */
+    font-weight: 200;
+    color: var(--text-secondary);
+    margin-bottom: 0;
+}
+
+.timeline-authors {
+    font-size: 1.2rem;
+    font-weight: 200;
+    color: var(--text-secondary);
+}
+
+.timeline-conference {
+    font-size: 1.2rem;
+    font-weight: 200;
+    /* color: var(--text-secondary); */
+}
+
+.timeline-item:last-child .timeline-content ul:last-of-type {
+    margin-bottom: 0;
+}
+
+.timeline-item:last-child .timeline-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.contact-linkedin-link {
+    margin-bottom: 0;
+}
 
 .carousel {
     position: relative;
@@ -29,8 +77,10 @@ a.paper-title-link {
 }
 
 .carousel-content {
+    aspect-ratio: 17/10;
     display: relative;
     width: 100%;
+    max-width: 1000px;
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
@@ -46,21 +96,6 @@ a.paper-title-link {
 
 .carousel-image.active {
     display: block;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.5);
-    color: var(--text-primary);
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: background-color 0.3s; 
-    z-index: 2;
 }
 
 .carousel-button.prev {
@@ -98,9 +133,6 @@ a.paper-title-link {
 }
 
 
-
-
-
 .project-image {
     width: 100%;
     max-width: 1000px;
@@ -108,6 +140,12 @@ a.paper-title-link {
     padding-bottom: 1rem;
     object-fit: cover;
 }
+
+.timeline-item .timeline-content .item-link {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
 
 body {
     background-color: var(--bg-dark);
@@ -154,24 +192,6 @@ section + section {
     width: 50px;
     height: 3px;
     background: var(--accent-color);
-}
-
-.timeline-period {
-    /* font-size: 1.2rem; */
-    font-weight: 200;
-    color: var(--text-secondary);
-}
-
-.timeline-authors {
-    font-size: 1.2rem;
-    font-weight: 200;
-    color: var(--text-secondary);
-}
-
-.timeline-conference {
-    font-size: 1.2rem;
-    font-weight: 200;
-    /* color: var(--text-secondary); */
 }
 
 .text-secondary {
@@ -359,12 +379,32 @@ section + section {
         border-radius: 8px;
         transition: transform 0.3s ease;
     }
+
+    .timeline-details {
+        margin-bottom: 2rem;
+    }
     
     .section-content {
         background: var(--bg-section);
         border-radius: 8px;
         padding: 2rem;
         margin-top: 1rem;  /* Space after section title */
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text-primary);
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s; 
+        z-index: 2;
+        font-size: 20px;
     }
 }
 
@@ -473,10 +513,12 @@ section + section {
     }
 
     .timeline-content {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
         border-radius: 8px;
         transition: transform 0.3s ease;
+    }
+
+    .timeline-details {
+        margin-bottom: 1.7rem;
     }
     
     .section-content {
@@ -484,5 +526,21 @@ section + section {
         border-radius: 8px;
         padding: 1rem;
         margin-top: 1rem;  /* Space after section title */
+    }
+
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 0, 0, 0.2);
+        color: var(--text-primary);
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s; 
+        z-index: 2;
+        font-size: 15px;
     }
 }

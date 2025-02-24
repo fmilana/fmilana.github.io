@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (Math.abs(swipeDistance) > minSwipeDistance) {
             if (swipeDistance > 0) {
-                nextImage();
-            } else {
                 prevImage();
+            } else {
+                nextImage();
             }
         }
     }

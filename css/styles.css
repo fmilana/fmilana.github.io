@@ -45,6 +45,14 @@ p.lead {
     margin-bottom: 0;
 }
 
+.project-details {
+    margin-top: 0.8rem;
+}
+
+.timeline-details li {
+    margin-top: 0.5rem; 
+}
+
 .timeline-authors {
     font-size: 1.2rem;
     font-weight: 200;

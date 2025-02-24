@@ -159,6 +159,37 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
     font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    padding-bottom: 0;
+    width: 100%;
+}
+
+.footer .container {
+    padding-left: 0;
+}
+
+.copyright {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .footer {
+        padding-left: 1rem;
+    }
 }
 
 /* Keep margin for other sections */

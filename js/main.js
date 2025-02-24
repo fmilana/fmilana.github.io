@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Scroll to top when clicking navbar name
     navbarBrand.addEventListener('click', (e) => {
-        e.preventDefault();http://127.0.0.1:3000/index.html#page-top
+        e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
         navbarCollapse.classList.remove('show');
     });

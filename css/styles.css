@@ -101,6 +101,50 @@ p.lead {
     -o-user-select: none;
 }
 
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    object-fit: contain;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    position: relative;
+    left: 0;
+    transform: none;
+}
+
+.exp-carousel {
+    position: relative;
+    overflow: visible;
+}
+
+.exp-carousel .carousel-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    object-fit: contain;
+    display: block;
+}
+
+.exp-carousel .carousel-image.active {
+    opacity: 1;
+    position: relative;
+    left: 0;
+    transform: none;
+}
+
 .VWCP-carousel {
     aspect-ratio: 16.5/10;
 }
@@ -110,13 +154,9 @@ p.lead {
     max-width: 350px;
 }
 
-.carousel-image {
-    transition: opacity 0.3s ease-in-out;
-    display: none;
-}
-
-.carousel-image.active {
-    display: block;
+.GTD-carousel .carousel-image.active {
+    opacity: 1;
+    position: relative;
 }
 
 .carousel-button.prev {
@@ -126,6 +166,15 @@ p.lead {
 .carousel-button.next {
     right: 10px;
 }
+
+/* .exp-carousel .carousel-button.prev {
+    left: 40px;
+}
+
+.exp-carousel .carousel-button.next {
+    right: 40px;
+} */
+
 
 .carousel-button:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -138,6 +187,10 @@ p.lead {
     transform: translateX(-50%);
     display: flex;
     gap: 5px;
+}
+
+.exp-carousel .carousel-dots {
+    position: absolute;
 }
 
 .GTD-carousel .carousel-dots {
@@ -469,6 +522,18 @@ section + section {
         border-radius: 8px;
         padding: 2rem;
         margin-top: 1rem;  /* Space after section title */
+    }
+
+    .GTD-carousel .carousel-image {
+        position: absolute;
+        top: 0;
+        left: 0%;
+        transform: none;
+        max-width: 350px;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        object-fit: contain;
     }
 
     .carousel-button {

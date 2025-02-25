@@ -9,17 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbarCollapse = document.querySelector('.navbar-collapse');
     const navbarBrand = document.querySelector('.navbar-brand');
 
-    const carousel = document.querySelector('.carousel');
-    const images = document.querySelectorAll('.carousel-image');
-    const prevButton = document.querySelector('.carousel-button.prev');
-    const nextButton = document.querySelector('.carousel-button.next');
-    const dots = document.querySelectorAll('.dot');
-
-    let currentIndex = 0; // Index of the currently displayed image
-
-    let touchStartX = 0;
-    let touchEndX = 0;
-
     // Scroll to top when clicking navbar name
     navbarBrand.addEventListener('click', (e) => {
         e.preventDefault();
@@ -68,6 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const images = carousel.querySelectorAll('.carousel-image');
         const dots = carousel.querySelectorAll('.dot');
         let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
         function showImage(index) {
             images.forEach(image => image.classList.remove('active'));
@@ -86,9 +77,40 @@ document.addEventListener('DOMContentLoaded', function () {
             showImage(currentIndex);
         }
 
+        function handleSwipe() {
+            const swipeDistance = touchEndX - touchStartX;
+            const minSwipeDistance = 50;
+
+            if (Math.abs(swipeDistance) > minSwipeDistance) {
+                if (swipeDistance > 0) {
+                    prevImage();
+                } else {
+                    nextImage();
+                }
+            }
+        }
+
+        // Touch events for this carousel
+        carousel.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        carousel.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
         // Attach event listeners to buttons
         carousel.querySelector('.carousel-button.next').addEventListener('click', nextImage);
         carousel.querySelector('.carousel-button.prev').addEventListener('click', prevImage);
+
+        // Add event listeners to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showImage(currentIndex);
+            });
+        });
 
         // Initialize the first image and dot
         showImage(currentIndex);
@@ -96,36 +118,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize all carousels on the page
     document.querySelectorAll('.carousel').forEach(initCarousel);
-
-    // Touch events
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
-        const swipeDistance = touchEndX - touchStartX;
-        const minSwipeDistance = 50;
-
-        if (Math.abs(swipeDistance) > minSwipeDistance) {
-            if (swipeDistance > 0) {
-                prevImage();
-            } else {
-                nextImage();
-            }
-        }
-    }
-
-    // Add event listeners to dots
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            currentIndex = index;
-            showImage(currentIndex);
-        });
-    });   
-    
 });

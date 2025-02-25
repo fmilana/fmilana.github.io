@@ -64,22 +64,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Carousel functionality
-    function showImage(index) {
-        images.forEach(image => image.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
-        images[index].classList.add('active');
-        dots[index].classList.add('active');
-    }
+    function initCarousel(carousel) {
+        const images = carousel.querySelectorAll('.carousel-image');
+        const dots = carousel.querySelectorAll('.dot');
+        let currentIndex = 0;
 
-    function nextImage() {
-        currentIndex = (currentIndex + 1) % images.length;
+        function showImage(index) {
+            images.forEach(image => image.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Attach event listeners to buttons
+        carousel.querySelector('.carousel-button.next').addEventListener('click', nextImage);
+        carousel.querySelector('.carousel-button.prev').addEventListener('click', prevImage);
+
+        // Initialize the first image and dot
         showImage(currentIndex);
     }
 
-    function prevImage() {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    }
+    // Initialize all carousels on the page
+    document.querySelectorAll('.carousel').forEach(initCarousel);
 
     // Touch events
     carousel.addEventListener('touchstart', (e) => {
@@ -103,10 +119,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     }
-
-    // Add event listeners to buttons
-    prevButton.addEventListener('click', prevImage);
-    nextButton.addEventListener('click', nextImage);
 
     // Add event listeners to dots
     dots.forEach((dot, index) => {

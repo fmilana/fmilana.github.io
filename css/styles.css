@@ -101,6 +101,10 @@ p.lead {
     -o-user-select: none;
 }
 
+.VWCP-carousel {
+    aspect-ratio: 16.5/10;
+}
+
 .GTD-carousel {
     aspect-ratio: 9/17;
     max-width: 350px;
@@ -623,13 +627,6 @@ section + section {
         transition: background-color 0.3s; 
         z-index: 2;
         font-size: 15px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        line-height: 1;
-        font-size: 1.2rem;
     }
 
     .GTD-carousel {

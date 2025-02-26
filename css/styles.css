@@ -381,6 +381,20 @@ section + section {
     display: block;
 }
 
+.cv-link {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+.cv-link:hover {
+    color: var(--text-primary);
+}
+
+
 /* DESKTOP */
 @media (min-width: 768px) {
     body {
@@ -550,7 +564,22 @@ section + section {
         transition: background-color 0.3s; 
         z-index: 2;
         font-size: 20px;
+
+        /* Add these properties for better icon alignment */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0; /* Remove any default padding */
     }
+
+    /* Fix for Safari/iOS specifically if needed */
+    /* @supports (-webkit-touch-callout: none) {
+        .carousel-button i {
+            position: relative;
+            top: 0; 
+            left: 0;
+        }
+    } */
 
     .GTD-carousel .carousel-button.next {
         left: 300px;

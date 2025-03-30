@@ -90,7 +90,6 @@ p.lead {
 
 .carousel-content {
     aspect-ratio: 17/10;
-    min-height: 280px;
     display: relative;
     width: 100%;
     max-width: 1000px;
@@ -546,6 +545,10 @@ section + section {
         object-fit: contain;
     }
 
+    .carousel-content {
+        min-height: 615px;
+    }
+
     .carousel-button {
         position: absolute;
         top: 50%;
@@ -705,6 +708,10 @@ section + section {
         border-radius: 8px;
         padding: 1rem;
         margin-top: 1rem;  /* Space after section title */
+    }
+
+    .carousel-content {
+        min-height: 280px;
     }
 
     .carousel-button {

@@ -764,6 +764,11 @@ section + section {
         max-width: 100%;
     } */
 
+    .GTD-carousel {
+        aspect-ratio: 9/17.5;
+        max-width: 100%;
+    }
+
     .GTD-carousel .carousel-dots {
         position: absolute;
         bottom: -2px;

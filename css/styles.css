@@ -90,6 +90,7 @@ p.lead {
 
 .carousel-content {
     aspect-ratio: 17/10;
+    min-height: 280px;
     display: relative;
     width: 100%;
     max-width: 1000px;

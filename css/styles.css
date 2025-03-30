@@ -89,7 +89,7 @@ p.lead {
 }
 
 .carousel-content {
-    aspect-ratio: 17/10;
+    /* aspect-ratio: 17/10; */
     display: relative;
     width: 100%;
     max-width: 1000px;
@@ -121,6 +121,7 @@ p.lead {
 }
 
 .exp-carousel {
+    aspect-ratio: 17/10;
     position: relative;
     overflow: visible;
 }
@@ -145,12 +146,12 @@ p.lead {
     transform: none;
 }
 
-.VWCP-carousel {
+/* .VWCP-carousel {
     aspect-ratio: 16.5/10;
-}
+} */
 
 .GTD-carousel {
-    aspect-ratio: 9/17;
+    aspect-ratio: 9/17.5;
     max-width: 350px;
 }
 
@@ -545,8 +546,9 @@ section + section {
         object-fit: contain;
     }
 
-    .carousel-content {
-        min-height: 615px;
+    .ta-content {
+        /* min-height: 615px; */
+        aspect-ratio: 9/17.5;
     }
 
     .carousel-button {
@@ -710,10 +712,6 @@ section + section {
         margin-top: 1rem;  /* Space after section title */
     }
 
-    .carousel-content {
-        min-height: 280px;
-    }
-
     .carousel-button {
         position: absolute;
         top: 50%;
@@ -730,8 +728,25 @@ section + section {
         font-size: 15px;
     }
 
+    .ta-content {
+        /* min-height: 300px; */
+        aspect-ratio: 16/10;
+        max-width: 100%;
+    }
+
+    .TACA-carousel {
+        min-height: 300px;
+        aspect-ratio: 16/9;
+        max-width: 100%;
+    }
+
+    .VWCP-carousel {
+        aspect-ratio: 16.5/10;
+        max-width: 100%;
+    }
+
     .GTD-carousel {
-        aspect-ratio: 9/17;
+        aspect-ratio: 9/17.5;
         max-width: 100%;
     }
 

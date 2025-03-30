@@ -120,10 +120,25 @@ p.lead {
     transform: none;
 }
 
+.ta-carousel {
+    aspect-ratio: 16/10;
+    max-width: 100%;
+}
+
 .exp-carousel {
     aspect-ratio: 17/10;
     position: relative;
     overflow: visible;
+}
+
+.TACA-carousel {
+    aspect-ratio: 16/9;
+    max-width: 100%;
+}
+
+.VWCP-carousel {
+    aspect-ratio: 16.5/10;
+    max-width: 100%;
 }
 
 .exp-carousel .carousel-image {
@@ -728,8 +743,7 @@ section + section {
         font-size: 15px;
     }
 
-    .ta-content {
-        /* min-height: 300px; */
+    /* .ta-content {
         aspect-ratio: 16/10;
         max-width: 100%;
     }
@@ -748,7 +762,7 @@ section + section {
     .GTD-carousel {
         aspect-ratio: 9/17.5;
         max-width: 100%;
-    }
+    } */
 
     .GTD-carousel .carousel-dots {
         position: absolute;

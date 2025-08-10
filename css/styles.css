@@ -729,29 +729,27 @@ section + section {
 }
 
 
-
+/* shrink navbar on shorter screens, e.g. macbook */
 @media (min-width: 768px) {
+  .navbar-brand span { font-size: 2.2rem; }
+  .nav-title { font-size: 1.1rem; }
+  .nav-link { font-size: 1.7rem; }
+
   #mainNav {
     padding: calc(1.2vh + 0.6rem) 0;
   }
 
   .profile-container {
-    width: clamp(140px, 18vh, 180px);
+    width: clamp(120px, 18vh, 180px);
     height: auto;
   }
 
-  .navbar-brand span {
-    font-size: clamp(1.6rem, 3.5vh, 2.2rem);
-  }
-
   .nav-title {
-    font-size: clamp(1.05rem, 1.8vh, 1.1rem);
     margin: calc(0.6vh) 0;
   }
 
   .nav-link {
-    padding: clamp(0.9rem, 1.5vh, 1.2rem) 0.5rem;
-    font-size: clamp(1.4rem, 2.1vh, 1.7rem);
+    padding: clamp(0.8rem, 1.5vh, 1.2rem) 0.5rem;
   }
 
   .social-links {

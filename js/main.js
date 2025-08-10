@@ -118,4 +118,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initialize all carousels on the page
     document.querySelectorAll('.carousel').forEach(initCarousel);
+
+    // Toggle other projects section
+    const btn = document.getElementById('toggle-other-projects');
+    const target = document.getElementById('other-projects');
+    if (!btn || !target) return;
+
+    // Wait until Bootstrap is available
+    const initWhenReady = () => {
+        if (!window.bootstrap || !window.bootstrap.Collapse) return false;
+
+        const cs = new bootstrap.Collapse(target, { toggle: false }); // don't auto-toggle on init
+
+        btn.addEventListener('click', () => cs.toggle());
+
+        const icon = document.getElementById('toggle-icon');
+        const text = document.getElementById('toggle-text');
+
+        target.addEventListener('shown.bs.collapse', () => {
+            text.textContent = 'Hide other projects';
+            icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+            btn.setAttribute('aria-expanded', 'true');
+        });
+
+        target.addEventListener('hidden.bs.collapse', () => {
+            text.textContent = 'Show other projects';
+            icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+            btn.setAttribute('aria-expanded', 'false');
+        });
+
+        return true;
+    };
+
+    if (!initWhenReady()) {
+        const iv = setInterval(() => initWhenReady() && clearInterval(iv), 50);
+        setTimeout(() => clearInterval(iv), 5000);
+    }
 });

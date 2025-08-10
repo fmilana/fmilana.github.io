@@ -90,7 +90,14 @@
                         <a class="nav-link active" href="#about" data-page="about" data-active="true">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects" data-page="projects">Projects</a>
+                        <a id="projects-nav-item" class="nav-link" href="#projects" data-page="projects">
+                            <span class="label">AI Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="portfolio-nav-item" class="nav-link" href="#portfolio" data-page="portfolio">
+                            <span class="label">UX Portfolio</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#publications" data-page="publications">Publications</a>
@@ -144,9 +151,9 @@
                 <h2 class="section-title">Experience</h2>
                 <div class="section-content">
                     <div class="timeline">
-                        <div class="timeline-item">
+                        <!-- <div class="timeline-item">
                             <div class="timeline-content">
-                                <h3 class="timeline-title">PhD Student</h3>
+                                <h3 class="timeline-title"><span><img src="res/ucl_logo.png" class="company-logo" alt="UCL logo"></span>PhD Student</h3>
                                 <p class="timeline-period">September 2020 - November 2024</p>
                                 <p class="timeline-location">University College London</p>
                                 <ul class="timeline-details">
@@ -154,10 +161,10 @@
                                     <li>Published papers in top HCI conferences</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <h3 class="timeline-title">Postgraduate Teaching Assistant</h3>
+                                <h3 class="timeline-title"><span class="company-logo-container"><img src="res/ucl_logo.png" class="company-logo" alt="UCL logo">Postgraduate Teaching Assistant</span></h3>
                                 <p class="timeline-period">January 2021 - May 2024</p>
                                 <p class="timeline-location">University College London</p>
                                 <ul class="timeline-details">
@@ -168,7 +175,7 @@
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <h3 class="timeline-title">Research Assistant</h3>
+                                <h3 class="timeline-title"><span class="company-logo-container"><img src="res/ucl_logo.png" class="company-logo" alt="UCL logo">Research Assistant</span></h3>
                                 <p class="timeline-period">August 2019 - October 2019</p>
                                 <p class="timeline-location">University College London</p>
                                 <ul class="timeline-details">
@@ -185,10 +192,11 @@
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
-                            <h3 class="timeline-title">PhD in Human-AI Interaction in Machine Learning</h3>
+                            <h3 class="timeline-title"><span class="company-logo-container"><img src="res/ucl_logo.png" class="company-logo" alt="UCL logo">PhD in Human-AI Interaction in Machine Learning</span></h3>
                             <p class="timeline-period">September 2020 - November 2024</p>
                             <p class="timeline-location">University College London</p>
                             <ul class="timeline-details">
+                                <li>Research focus on Human-AI Interaction and Explainable AI in Machine Learning</li>
                                 <li>Thesis title: "Evaluating Interaction with Machine Learning Classifiers and Interpretability Techniques"</li>
                             </ul>
                             <a href="docs/Federico_Milana_PhD_Thesis.pdf" download class="thesis-link">
@@ -198,7 +206,7 @@
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 class="timeline-title">MSc in Human-Computer Interaction</h3>
+                            <h3 class="timeline-title"><span class="company-logo-container"><img src="res/ucl_logo.png" class="company-logo" alt="UCL logo">MSc in Human-Computer Interaction</span></h3>
                             <p class="timeline-period">September 2018 - August 2019</p>
                             <p class="timeline-location">University College London</p>
                             <ul class="timeline-details">
@@ -212,7 +220,7 @@
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3 class="timeline-title">BSc in Computer Science</h3>
+                            <h3 class="timeline-title"><span class="company-logo-container"><img src="res/kcl_logo.png" class="company-logo" alt="KCL logo">BSc in Computer Science</span></h3>
                             <p class="timeline-period">September 2015 - July 2018</p>
                             <p class="timeline-location">King's College London</p>
                             <ul class="timeline-details">
@@ -252,6 +260,10 @@
             <section>
                 <h2 class="section-title">ML Resource Cost Estimator</h2>
                 <div class="section-content">
+                    <img src="res/projects/ml-cost-estimator-logo.png"
+                        alt="Logo of the ML Resource Cost Estimator library"
+                        class="ml-cost-estimator-logo">
+
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
@@ -262,7 +274,6 @@
                                     <li>Integrates LLM APIs to provide realistic estimates for different model architectures and training methodologies</li>
                                     <li>Designed to assist researchers and developers in planning and budgeting for ML training initiatives, optimizing resource allocation, and evaluating the environmental impact of their models</li>
                                 </ul>
-                                <!-- GitHub link removed as the repository is private -->
                             </div>
                         </div>
                     </div>
@@ -275,16 +286,15 @@
                 <div class="section-content">
                     <div class="carousel">
                         <div class="carousel-content qlora-carousel">
-                            <img src = "res/finetuning_1.png" alt ="Evaluation Loss Functions" class="project-image carousel-image active">
-                            <img src = "res/finetuning_2.png" alt ="Evaluation Mean Token Accuracy" class="project-image carousel-image active">
+                            <img src="res/projects/finetuning_1.png" alt="Evaluation Loss Functions" class="project-image carousel-image active">
+                            <img src="res/projects/finetuning_2.png" alt="Evaluation Mean Token Accuracy" class="project-image carousel-image active">
 
                             <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                             <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
                         </div>
                     </div>
                     <div class="timeline">
@@ -294,7 +304,7 @@
                                 <ul class="timeline-details project-details">
                                     <li>Fine-tuned LLaMA-3-8B-Instruct on personal WhatsApp group chats using Quantized Low-Rank Adaptation (QLoRA) for efficient training on consumer hardware</li>
                                     <li>Implemented parameter-efficient fine-tuning techniques to maintain model performance while reducing computational requirements</li>
-                                    <li>Engineered a communication pipeline using the Telegram API for seamless integration, allowing the model to analyze conversations and generate contextually appropriate responses that mimic a specific user's writing style</li>
+                                    <li>Engineering a communication pipeline using the Telegram API for seamless integration, allowing the model to analyze conversations and generate contextually appropriate responses that mimic a specific user's writing style</li>
                                 </ul>
                                 <a href="https://github.com/fmilana/TelegramBot" target="_blank" class="item-link">
                                     <i class="fab fa-github"></i>
@@ -311,24 +321,23 @@
                 <div class="section-content">
                     <div class="carousel">
                         <div class="carousel-content ta-carousel">
-                            <img src = "res/ta_1.png" alt ="Screenshot of the Translation Annotator" class="project-image carousel-image active">
-                            <img src = "res/ta_2.png" alt ="Screenshot of the Translation Annotator" class="project-image carousel-image">
-                            <img src = "res/ta_3.png" alt ="Screenshot of the Translation Annotator" class="project-image carousel-image">
-                            <img src = "res/ta_4.png" alt ="Screenshot of the Translation Annotator" class="project-image carousel-image">
-                            <img src = "res/ta_5.png" alt ="Screenshot of the Translation Annotator" class="project-image carousel-image">
-                            <img src = "res/ta_6.png" alt ="Screenshot of the Translation Annotator" class="project-image carousel-image">
+                            <img src="res/projects/ta_1.png" alt="Screenshot of the Translation Annotator" class="project-image carousel-image active">
+                            <img src="res/projects/ta_2.png" alt="Screenshot of the Translation Annotator" class="project-image carousel-image">
+                            <img src="res/projects/ta_3.png" alt="Screenshot of the Translation Annotator" class="project-image carousel-image">
+                            <img src="res/projects/ta_4.png" alt="Screenshot of the Translation Annotator" class="project-image carousel-image">
+                            <img src="res/projects/ta_5.png" alt="Screenshot of the Translation Annotator" class="project-image carousel-image">
+                            <img src="res/projects/ta_6.png" alt="Screenshot of the Translation Annotator" class="project-image carousel-image">
 
                             <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                             <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
                         </div>
                     </div>
                     <div class="timeline">
@@ -362,25 +371,24 @@
                 <div class="section-content">
                     <div class="carousel">
                         <div class="carousel-content exp-carousel">
-                            <img src = "res/exp_1.png" alt ="Screenshot of the Corpus Processor extraction page" class="project-image carousel-image active">
-                            <img src = "res/exp_2.png" alt ="Screenshot of the Corpus Processor alignment page" class="project-image carousel-image">
-                            <img src = "res/exp_3.png" alt ="Screenshot of the Corpus Processor search page" class="project-image carousel-image">
-                            <img src = "res/exp_4.png" alt ="Screenshot of the Corpus Processor type token page" class="project-image carousel-image">
-                            <img src = "res/exp_5.png" alt ="Screenshot of the Corpus Processor lexical frequency page" class="project-image carousel-image">
+                            <img src="res/projects/exp_1.png" alt="Screenshot of the Corpus Processor extraction page" class="project-image carousel-image active">
+                            <img src="res/projects/exp_2.png" alt="Screenshot of the Corpus Processor alignment page" class="project-image carousel-image">
+                            <img src="res/projects/exp_3.png" alt="Screenshot of the Corpus Processor search page" class="project-image carousel-image">
+                            <img src="res/projects/exp_4.png" alt="Screenshot of the Corpus Processor type token page" class="project-image carousel-image">
+                            <img src="res/projects/exp_5.png" alt="Screenshot of the Corpus Processor lexical frequency page" class="project-image carousel-image">
 
                             <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                             <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
                         </div>
                     </div>
-                    <!-- <img src = "res/exp.png" alt ="Screenshot of the interpretable text classification model classifications" class="project-image"> -->
+                    <!-- <img src="res/exp.png" alt="Screenshot of the interpretable text classification model classifications" class="project-image"> -->
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
@@ -405,20 +413,19 @@
                 <div class="section-content">
                     <div class="carousel">
                         <div class="carousel-content taca-carousel">
-                            <img src = "res/taca_1.png" alt ="Screenshot of the TACA Text page" class="project-image carousel-image active">
-                            <img src = "res/taca_2.png" alt ="Screenshot of the TACA Codes page" class="project-image carousel-image">
-                            <img src = "res/taca_3.png" alt ="Screenshot of the TACA Keywords page" class="project-image carousel-image">
-                            <img src = "res/taca_4.png" alt ="Screenshot of the TACA Confusion Tables page" class="project-image carousel-image">
+                            <img src="res/projects/taca_1.png" alt="Screenshot of the TACA Text page" class="project-image carousel-image active">
+                            <img src="res/projects/taca_2.png" alt="Screenshot of the TACA Codes page" class="project-image carousel-image">
+                            <img src="res/projects/taca_3.png" alt="Screenshot of the TACA Keywords page" class="project-image carousel-image">
+                            <img src="res/projects/taca_4.png" alt="Screenshot of the TACA Confusion Tables page" class="project-image carousel-image">
 
                             <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                             <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
                         </div>
                     </div>
                     <div class="timeline">
@@ -450,7 +457,7 @@
             <section>
                 <h2 class="section-title">Chatbot Social Trading Assistant</h2>
                 <div class="section-content">
-                    <img src = "res/chat.png" alt ="Screenshot of the chatbot social trading assistant" class="project-image">
+                    <img src="res/projects/chat.png" alt="Screenshot of the chatbot social trading assistant" class="project-image">
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
@@ -473,21 +480,30 @@
                     </div>
             </section>
 
-            <section>
-                <h2 class="section-title">Literary Corpus Processor</h2>
-                <div class="section-content">
-                    <div class="carousel">
-                        <div class="carousel-content VWCP-carousel">
-                            <img src = "res/VWCP_1.png" alt ="Screenshot of the Corpus Processor extraction page" class="project-image carousel-image active">
-                            <img src = "res/VWCP_2.png" alt ="Screenshot of the Corpus Processor alignment page" class="project-image carousel-image">
-                            <img src = "res/VWCP_3.png" alt ="Screenshot of the Corpus Processor search page" class="project-image carousel-image">
-                            <img src = "res/VWCP_4.png" alt ="Screenshot of the Corpus Processor type token page" class="project-image carousel-image">
-                            <img src = "res/VWCP_5.png" alt ="Screenshot of the Corpus Processor lexical frequency page" class="project-image carousel-image">
-                            <img src = "res/VWCP_6.png" alt ="Screenshot of the Corpus Processor word cloud page" class="project-image carousel-image">
+            <div id="toggle-other-projects-container" class="mt-4">
+                <button id="toggle-other-projects" type="button" class="btn btn-outline-light">
+                    <i id="toggle-icon" class="fas fa-chevron-down"></i>
+                    <span id="toggle-text">Show other projects</span>
+                </button>
+            </div>
 
-                            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
-                            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+            <div id="other-projects" class="collapse mt-3">
 
+                <section>
+                    <h2 class="section-title">Literary Corpus Processor</h2>
+                    <div class="section-content">
+                        <div class="carousel">
+                            <div class="carousel-content VWCP-carousel">
+                                <img src="res/projects/VWCP_1.png" alt="Screenshot of the Corpus Processor extraction page" class="project-image carousel-image active">
+                                <img src="res/projects/VWCP_2.png" alt="Screenshot of the Corpus Processor alignment page" class="project-image carousel-image">
+                                <img src="res/projects/VWCP_3.png" alt="Screenshot of the Corpus Processor search page" class="project-image carousel-image">
+                                <img src="res/projects/VWCP_4.png" alt="Screenshot of the Corpus Processor type token page" class="project-image carousel-image">
+                                <img src="res/projects/VWCP_5.png" alt="Screenshot of the Corpus Processor lexical frequency page" class="project-image carousel-image">
+                                <img src="res/projects/VWCP_6.png" alt="Screenshot of the Corpus Processor word cloud page" class="project-image carousel-image">
+
+                                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
                             <div class="carousel-dots">
                                 <span class="dot active"></span>
                                 <span class="dot"></span>
@@ -497,23 +513,115 @@
                                 <span class="dot"></span>
                             </div>
                         </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <p class="timeline-period">2018</p>
+                                    <ul class="timeline-details project-details">
+                                        <li>A tool to enable corpus-based analysis and comparisons of translated literary texts</li>
+                                        <li>Developed for the following publications:</li>
+                                        <ul>
+                                            <li>Anna Maria Cipriani (2019). <a href="https://www.researchgate.net/publication/338126782_The_Impact_of_Censorship_on_Translating_and_Publishing_Virginia_Woolf_during_the_1930s_in_Italy_The_Case_of_To_the_Lighthouse" target="_blank">The Impact of Censorship on Translating and Publishing Virginia Woolf during the 1930s in Italy: The Case of To the Lighthouse</a></li>
+                                            <li>Anna Maria Cipriani (2022). <a href="https://www.euppublishing.com/doi/abs/10.3366/cor.2022.0265" target="_blank">The translator’s presence in (re)translations of To the Lighthouse into Italian: a corpus-driven study</a></li>
+                                        </ul>
+                                    </ul>
+                                    <a href="https://github.com/fmilana/CorpusProcessor" target="_blank" class="item-link">
+                                        <i class="fab fa-github"></i>
+                                        <span class="item-link-text">GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="section-title">Getting Things Done</h2>
+                    <div class="section-content">
+                        <div class="carousel">
+                            <div class="carousel-content GTD-carousel">
+                                <img src="res/projects/GTD_1.png" alt="Screenshot of the Getting Things Done application login page" class="project-image carousel-image active">
+                                <img src="res/projects/GTD_2.png" alt="Screenshot of the Getting Things Done application tutorial page" class="project-image carousel-image">
+                                <img src="res/projects/GTD_3.png" alt="Screenshot of the Getting Things Done application main page" class="project-image carousel-image">
+                                <img src="res/projects/GTD_4.png" alt="Screenshot of the Getting Things Done application calendar page" class="project-image carousel-image">
+                                <img src="res/projects/GTD_5.png" alt="Screenshot of the Getting Things Done application settings page" class="project-image carousel-image">
+                                <img src="res/projects/GTD_6.png" alt="Screenshot of a notification from the Getting Things Done application" class="project-image carousel-image">
+
+                                <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                                <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="carousel-dots">
+                                <span class="dot active"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <p class="timeline-period">2018</p>
+                                    <ul class="timeline-details">
+                                        <li>An Android application using context-awareness to implement David Allen's productivity methodology</li>
+                                    </ul>
+                                    <a href="https://github.com/fmilana/GettingThingsDone" target="_blank" class="item-link">
+                                        <i class="fab fa-github"></i>
+                                        <span class="item-link-text">GitHub</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+
+        </div>
+
+        <div id="portfolio-content" class="page-content">
+
+            <section>
+                <h2 class="section-title">XAI in the Thematic Analysis Coding Assistant</h2>
+                <div class="section-content">
+                    <div class="carousel">
+                        <div class="carousel-content portfolio-taca-carousel">
+                            <img src="res/portfolio/taca_1.png" alt="Screenshot of the TACA Text page" class="project-image carousel-image active">
+                            <img src="res/portfolio/taca_2.png" alt="Screenshot of the TACA Codes page" class="project-image carousel-image">
+                            <img src="res/portfolio/taca_3.png" alt="Screenshot of the TACA Keywords page" class="project-image carousel-image">
+                            <img src="res/portfolio/taca_4.png" alt="Screenshot of the TACA Confusion Tables page" class="project-image carousel-image">
+                            <img src="res/portfolio/taca_5.png" alt="Screenshot of the TACA Model Training page" class="project-image carousel-image">
+                            <img src="res/portfolio/taca_6.png" alt="Screenshot of the TACA Model Evaluation page" class="project-image carousel-image">
+
+                            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
                     </div>
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <!-- <h3 class="timeline-title">Literary Corpus Processor</h3> -->
-                                <p class="timeline-period">2018</p>
+                                <p class="timeline-period">2021</p>
                                 <ul class="timeline-details project-details">
-                                    <li>A tool to enable corpus-based analysis and comparisons of translated literary texts</li>
-                                    <li>Developed for the following publications:</li>
-                                    <ul>
-                                        <li>Anna Maria Cipriani (2019). <a href="https://www.researchgate.net/publication/338126782_The_Impact_of_Censorship_on_Translating_and_Publishing_Virginia_Woolf_during_the_1930s_in_Italy_The_Case_of_To_the_Lighthouse" target="_blank">The Impact of Censorship on Translating and Publishing Virginia Woolf during the 1930s in Italy: The Case of To the Lighthouse</a></li>
-                                        <li>Anna Maria Cipriani (2022). <a href="https://www.euppublishing.com/doi/abs/10.3366/cor.2022.0265" target="_blank">The translator’s presence in (re)translations of To the Lighthouse into Italian: a corpus-driven study</a></li>
-                                    </ul>
+                                    <li><strong>Goal:</strong> Prototype explainability features in TACA (heatmaps, rationales, confidence cues) and design a study flow to assess their effect on qualitative coding</li>
+                                    <li><strong>Research:</strong> Reviewed XAI patterns (saliency, rationales, confidence) + heuristic walkthroughs with qualitative researchers</li>
+                                    <li><strong>Requirements:</strong> Toggleable explanations; preserve reading flow; show model limits; enable quick re-label with rationale</li>
+                                    <li><strong>Design:</strong> Desktop wireframes for <em>Text</em> (highlighted spans, inline rationales) and <em>Keywords</em> (theme buckets, re-classify) guided by usability heuristics</li>
+                                    <li><strong>Key UI:</strong> “Explain” toggle; tooltips; side theme bars; FP/TP galleries; confidence on demand</li>
+                                    <li><strong>Testing:</strong> Planned between-subjects study (with/without explanations) measuring accuracy, time, trust, and think-aloud insights</li>
+                                    <li><strong>Outcome:</strong> Clickable prototype + study protocol; findings guided later TACA iterations (final evaluation done separately)</li>
                                 </ul>
-                                <a href="https://github.com/fmilana/CorpusProcessor" target="_blank" class="item-link">
-                                    <i class="fab fa-github"></i>
-                                    <span class="item-link-text">GitHub</span>
+                                <a href="https://www.figma.com/design/pYgrODuoEZtmI9x49GCjXZ/Untitled?node-id=0-1&t=6TOZ92gBnuIsrCzZ-1" target="_blank" class="item-link">
+                                    <i class="fab fa-figma"></i>
+                                    <span class="item-link-text me-3">Figma</span>
                                 </a>
                             </div>
                         </div>
@@ -522,46 +630,155 @@
             </section>
 
             <section>
-                <h2 class="section-title">Getting Things Done</h2>
+                <h2 class="section-title">UCH ICU Dashboard</h2>
                 <div class="section-content">
                     <div class="carousel">
-                        <div class="carousel-content GTD-carousel">
-                            <img src = "res/GTD_1.png" alt ="Screenshot of the Getting Things Done application login page" class="project-image carousel-image active">
-                            <img src = "res/GTD_2.png" alt ="Screenshot of the Getting Things Done application tutorial page" class="project-image carousel-image">
-                            <img src = "res/GTD_3.png" alt ="Screenshot of the Getting Things Done application main page" class="project-image carousel-image">
-                            <img src = "res/GTD_4.png" alt ="Screenshot of the Getting Things Done application calendar page" class="project-image carousel-image">
-                            <img src = "res/GTD_5.png" alt ="Screenshot of the Getting Things Done application settings page" class="project-image carousel-image">
-                            <img src = "res/GTD_6.png" alt ="Screenshot of a notification from the Getting Things Done application" class="project-image carousel-image">
+                        <div class="carousel-content portfolio-uclh-carousel">
+                            <img src="res/portfolio/uclh_1.png" alt="Screenshot of the UCLH ICU Dashboard homepage" class="project-image carousel-image active">
+                            <img src="res/portfolio/uclh_2.png" alt="Screenshot of the UCLH ICU Dashboard discharge time page" class="project-image carousel-image">
+                            <img src="res/portfolio/uclh_3.png" alt="Screenshot of the UCLH ICU Dashboard tidal volume page" class="project-image carousel-image">
+                            <!-- <img src="res/portfolio/uclh_4.png" alt="Screenshot of the UCLH ICU Dashboard arterial BP page" class="project-image carousel-image">
+                            <img src="res/portfolio/uclh_5.png" alt="Screenshot of the UCLH ICU Dashboard fluid balance page" class="project-image carousel-image">
+                            <img src="res/portfolio/uclh_6.png" alt="Screenshot of the UCLH ICU Dashboard O2 sats page" class="project-image carousel-image"> -->
+                            <img src="res/portfolio/uclh_7.png" alt="Screenshot of the UCLH ICU Dashboard quality and safety outcomes" class="project-image carousel-image">
 
                             <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
                             <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
-
-                            <div class="carousel-dots">
-                                <span class="dot active"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                                <span class="dot"></span>
-                            </div>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <!-- <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span> -->
+                            <span class="dot"></span>
                         </div>
                     </div>
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-content">
-                                <!-- <h3 class="timeline-title">Literary Corpus Processor</h3> -->
-                                <p class="timeline-period">2018</p>
-                                <ul class="timeline-details">
-                                    <li>An Android application using context-awareness to implement David Allen's productivity methodology</li>
+                                <p class="timeline-period">2019</p>
+                                <ul class="timeline-details project-details">
+                                    <li><strong>Goal:</strong> Design an ICU dashboard for the University College Hospital to display real-time patient metrics, safety indicators, and unit performance</li>
+                                    <li><strong>Research:</strong> Interviews and contextual observations with ICU nurses to understand workflows, priorities, and pain points</li>
+                                    <li><strong>Requirements:</strong> At-a-glance patient status; clear safety alerts; ward-level performance view; minimal clicks to key metrics</li>
+                                    <li><strong>Design:</strong> Modular card-based layout for “Unit at a glance,” target metrics, safety metrics, and quality outcomes; colour-coded indicators for rapid scanning</li>
+                                    <li><strong>Key UI:</strong> Bed occupancy and usage panels; interactive ward map; metric cards with progress rings; split North/Southside performance; delay reasons colour-coded by type</li>
+                                    <li><strong>Testing:</strong> Iterative feedback sessions with ICU nurses to refine data grouping, colour use, and alert thresholds</li>
+                                    <li><strong>Outcome:</strong> Delivered high-fidelity dashboard prototype aligning with clinical workflows and supporting rapid decision-making</li>
                                 </ul>
-                                <a href="https://github.com/fmilana/GettingThingsDone" target="_blank" class="item-link">
-                                    <i class="fab fa-github"></i>
-                                    <span class="item-link-text">GitHub</span>
+                                <a href="https://www.figma.com/design/8dIcAYCb9Gl0Nh2Dy7p23J/Dashboard?node-id=2-2&t=YzOzQ72ujNGFuB91-1" target="_blank" class="item-link">
+                                    <i class="fab fa-figma"></i>
+                                    <span class="item-link-text me-3">Figma</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Calthorpe Project Engagement Initiative</h2>
+                <div class="section-content">
+                    <div class="carousel">
+                        <div class="carousel-content portfolio-calthorpe-carousel">
+                            <img src="res/portfolio/calthorpe_1.png" alt="Sketches of an initial prototype of an interactive cafe menu" class="project-image carousel-image active">
+                            <img src="res/portfolio/calthorpe_2.png" alt="Sketches of an initial prototype of a vegetable vending machine" class="project-image carousel-image">
+                            <img src="res/portfolio/calthorpe_3.png" alt="Sketches and render of the initial prototype of the interactive dashboard" class="project-image carousel-image">
+                            <img src="res/portfolio/calthorpe_4.png" alt="Photograph of a low-fidelity prototype of the dashboard" class="project-image carousel-image">
+                            <img src="res/portfolio/calthorpe_5.png" alt="Photograph of a the rendered dashboard at the entrance of the garden" class="project-image carousel-image">
+
+                            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <p class="timeline-period">2018</p>
+                                <ul class="timeline-details">
+                                    <li><strong>Goal:</strong> Increase community engagement with the Calthorpe Project, a community garden in central London</li>
+                                    <li><strong>Research:</strong> Interviews with staff and visitors to gather requirements; observed on-site interactions</li>
+                                    <li><strong>Concept:</strong> Initial vegetable vending machine and interactive menu ideas replaced with an outdoor interactive map to promote activities and volunteering</li>
+                                    <li><strong>Design:</strong> Low-fidelity prototype using cardboard, printed map, and tablet; map and touchscreen UI designed to guide visitors to points of interest</li>
+                                    <li><strong>Testing:</strong> Observed passers-by interacting with the prototype; noted usability issues and refined prompts and navigation</li>
+                                    <li><strong>Outcome:</strong> Validated map concept as effective for attracting attention and informing visitors about the garden</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Airline Booking System Experience</h2>
+                <div class="section-content">
+                    <div class="carousel">
+                        <div class="carousel-content portfolio-airline-carousel">
+                            <img src="res/portfolio/airline_1.png" alt="Screenshot of the airline website homepage" class="project-image carousel-image active">
+                            <img src="res/portfolio/airline_2.png" alt="Screenshot of the airline website registration page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_3.png" alt="Screenshot of the airline website flight selection page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_4.png" alt="Screenshot of the airline website passenger details page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_5.png" alt="Screenshot of the airline website payment page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_6.png" alt="Screenshot of the airline website hotel room booking page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_7.png" alt="Screenshot of the airline website car rental page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_8.png" alt="Screenshot of the airline website check in login page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_9.png" alt="Screenshot of the airline website check in seat selection page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_10.png" alt="Screenshot of the airline website check in random seat selected page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_11.png" alt="Screenshot of the airline website check in extras page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_12.png" alt="Screenshot of the airline website boarding pass page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_13.png" alt="Screenshot of the airline website cancel flight page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_14.png" alt="Screenshot of the airline website promotional holiday package page" class="project-image carousel-image">
+                            <img src="res/portfolio/airline_15.png" alt="Screenshot of the airline website customer support page" class="project-image carousel-image">
+
+
+                            <button class="carousel-button prev"><i class="fas fa-chevron-left"></i></button>
+                            <button class="carousel-button next"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="carousel-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <p class="timeline-period">2017</p>
+                                <ul class="timeline-details">
+                                    <li><strong>Goal:</strong> Design and evaluate a desktop airline booking experience</li>
+                                    <li><strong>Research:</strong> Competitive analysis (easyJet, BA, Ryanair) + 12-person questionnaire</li>
+                                    <li><strong>Requirements:</strong> Prioritise flight booking, allow booking without login, minimise pop-ups, highlight seat selection and extra baggage</li>
+                                    <li><strong>Design:</strong> 15 linked wireframes in Balsamiq guided by Nielsen/Molich principles and user mental models</li>
+                                    <li><strong>Key UI:</strong> Central flight search; top nav for check-in/cancel; step progress indicators; horizontal results to reduce scrolling; error-prevention via disabled actions</li>
+                                    <li><strong>Testing:</strong> 5 participants in natural settings; SUS survey + qualitative notes</li>
+                                    <li><strong>Findings:</strong> Improve visibility for “Home”/checkboxes; positive feedback on minimal look and navigation shortcuts</li>
+                                    <li><strong>Outcome:</strong> SUS 84/100 (above-average usability)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
             </section>
         </div>
 

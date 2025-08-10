@@ -128,23 +128,34 @@ document.addEventListener('DOMContentLoaded', function () {
     const initWhenReady = () => {
         if (!window.bootstrap || !window.bootstrap.Collapse) return false;
 
-        const cs = new bootstrap.Collapse(target, { toggle: false }); // don't auto-toggle on init
-
+        const cs = new bootstrap.Collapse(target, { toggle: false });
         btn.addEventListener('click', () => cs.toggle());
 
         const icon = document.getElementById('toggle-icon');
         const text = document.getElementById('toggle-text');
 
+        // helper: scroll the toggle button to the top (account for mobile navbar height)
+        const scrollToggleIntoView = () => {
+            const isMobile = window.innerWidth < 768;          // your mobile breakpoint
+            const offset = isMobile ? navbar.offsetHeight : 0; // sticky top bar height
+            const y = btn.getBoundingClientRect().top + window.pageYOffset - offset - 8;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        };
+
+        // when it opens, scroll so the button sits right under the navbar
         target.addEventListener('shown.bs.collapse', () => {
             text.textContent = 'Hide other projects';
             icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
             btn.setAttribute('aria-expanded', 'true');
+            scrollToggleIntoView();
         });
 
+        // optional: when it closes, keep the button visible too
         target.addEventListener('hidden.bs.collapse', () => {
             text.textContent = 'Show other projects';
             icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
             btn.setAttribute('aria-expanded', 'false');
+            scrollToggleIntoView();
         });
 
         return true;

@@ -115,6 +115,7 @@ p.lead {
 }
 
 /* 3) Per-carousel ratios (so height never changes) */
+.teemops-carousel { --ratio: 16/12; }
 .qlora-carousel  { --ratio: 16/9.5;}
 .ta-carousel     { --ratio: 16/10; }
 .exp-carousel    { --ratio: 17/10; }
